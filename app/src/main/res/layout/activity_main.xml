@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/screen_margin"
+    tools:context=".MainActivity">
+
+    <!-- Display Text -->
+    <TextView
+        android:id="@+id/name_display"
+        style="@style/text_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_input"
+        android:hint="@string/name_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_display">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Student ID Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_input"
+        android:hint="@string/id_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_wrapper">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="11"
+            android:digits="0123456789"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/name_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="@string/button_name_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_wrapper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
